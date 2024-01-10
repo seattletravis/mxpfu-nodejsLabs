@@ -37,8 +37,8 @@ router.get("/:email",(req,res)=>{
 
 // POST request: Create a new user
 router.post("/",(req,res)=>{
-  // Copy the code here
-  res.send("Yet to be implemented")//This line is to be replaced with actual return value
+  users.push({"firstName":req.query.firstName, "lastName":req.query.lastName, "email":req.query.email, "DOB":req.query.DOB})
+  res.send("The user" + (' ') + (req.query.firstName) + " Has been added!")
 });
 
 
