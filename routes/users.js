@@ -80,6 +80,7 @@ router.delete('/:email', (req, res) => {
 });
 
 // GET users with a particular Last Name eg. 'Smith'
+// use localhost:5000/user/lastName/smith on PostMan
 router.get('/lastName/:lastName', (req, res) => {
 	const lastName = req.params.lastName;
 	let filtered_lastname = users.filter((user) => user.lastName === lastName);
